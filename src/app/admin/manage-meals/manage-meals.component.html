@@ -1,0 +1,65 @@
+<!-- Title Page -->
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
+	style="background-image: url(assets/images/bg-title-page-02.jpg);">
+	<h2 class="tit6 t-center">
+		Manage Meals
+	</h2>
+</section>
+
+<section class=" p-t-120 p-b-105">
+	<div class="container">
+		<div class="row">
+			<div class="col-10" style="margin-bottom: 20px;">
+				<h3>Type of Meals</h3>
+			</div>
+			<div class="col-2 text-right" style="margin-bottom: 20px; ">
+				<button class="btn btn-success " routerLink="/admin/add-meals">Add Meal</button>
+			</div>
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Type</th>
+					<th scope="col">Day1</th>
+					<th scope="col">Day2</th>
+					<th scope="col">Day3</th>
+					<th scope="col">Day4</th>
+					<th scope="col">Day5</th>
+					<th scope="col">Day6</th>
+					<th scope="col">Day7</th>
+					<th scope="col">PricePerDay</th>
+					<th scope="col">CreatedAt</th>
+					<th scope="col">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+					@for (x of meal; track $index) {
+						<tr>
+					<th scope="row">{{$index+1}}</th>
+					<td>{{x?.type}}</td>
+					<td>{{x?.day1}}</td>
+					<td>{{x?.day2}}</td>
+					<td>{{x?.day3}}</td>
+					<td>{{x?.day4}}</td>
+					<td>{{x?.day5}}</td>
+					<td>{{x?.day6}}</td>
+					<td>{{x?.day7}}</td>
+					<td>{{x?.pricePerDay | currency:'INR'}}</td>
+					<td>{{x?.createdAt | date:'short'}}</td>
+					<td>
+						<button class="btn btn-danger mx-1" [routerLink]="['/admin/update-meals',x?.id]">
+							<i class="fa-solid fa-marker"></i>
+						</button>
+						<button class="btn btn-success mx-1" (click)="deleteFun(x?.id)">
+							<i class="fa-solid fa-trash"></i>
+						</button>
+					</td>
+				</tr>
+				}
+				
+			</tbody>
+		</table>
+	</div>
+</section>

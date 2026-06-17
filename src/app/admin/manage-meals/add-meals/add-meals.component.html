@@ -1,0 +1,116 @@
+<!-- Title Page -->
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
+    style="background-image: url(assets/images/bg-title-page-02.jpg);">
+    <h2 class="tit6 t-center " style="color: rgb(243, 138, 138); cursor: pointer;" routerLink="/admin/manage-meals">Manage Meals /</h2><h1 style="color: white;">Add Meals</h1>
+</section>
+
+<section class="section-contact bg1-pattern">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <form class="wrap-form-reservation size22 m-l-r-auto" (submit)="addSubmit()">
+                    <div class="row pt-5">
+                        <div class="col-md-6">
+                            <div class="txt9">
+                                Enter Type
+                            </div>
+
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="type"
+                                    placeholder="Enter Type" [(ngModel)]="mealObj.type">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="txt9">
+                                Day 1
+                            </div>
+
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="day1"
+                                    placeholder="Day 1" [(ngModel)]="mealObj.day1">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="txt9">
+                                Day 2
+                            </div>
+
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="day2"
+                                    placeholder="Day 2" [(ngModel)]="mealObj.day2">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="txt9">
+                                Day 3
+                            </div>
+
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="day3"
+                                    placeholder="Day 3" [(ngModel)]="mealObj.day3">
+                            </div>
+                        </div> <div class="col-md-6">
+                            <div class="txt9">
+                                Day 4
+                            </div>
+
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="day4"
+                                    placeholder="Day 4" [(ngModel)]="mealObj.day4">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="txt9">
+                                Day 5
+                            </div>
+
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="day5"
+                                    placeholder="Day 5" [(ngModel)]="mealObj.day5">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="txt9">
+                                Day 6
+                            </div>
+
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="day6"
+                                    placeholder="Day 6" [(ngModel)]="mealObj.day6">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="txt9">
+                                Day 7
+                            </div>
+
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="day7"
+                                    placeholder="Day 7" [(ngModel)]="mealObj.day7">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="txt9">
+                                PricePerDay
+                            </div>
+
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="number" name="price"
+                                    placeholder="PricePerDay" [(ngModel)]="mealObj.pricePerDay">
+                            </div>
+                        </div>
+
+                        <div class="wrap-btn-booking flex-c-m m-t-13 ">
+                            <button type="submit" class="btn3 flex-c-m size36 txt11 trans-0-4 m-b-35">
+                               Add
+                            </button>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+</section>
