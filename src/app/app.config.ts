@@ -1,4 +1,4 @@
-import { ApplicationConfig, importProvidersFrom } from '@angular/core';
+import { ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideToastr } from 'ngx-toastr';
@@ -16,11 +16,11 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),
     provideToastr(),
     provideRouter(routes),
-    importProvidersFrom([
+ 
       provideFirebaseApp(()=> initializeApp(environment.firebase)),
       provideFirestore(()=> getFirestore()),
-      provideAuth(()=>getAuth())
-  ]),
+      provideAuth(()=>getAuth()),
+
     provideSpinnerConfig({type: 'ball-scale-multiple'}),
     {provide:FIREBASE_OPTIONS,useValue:environment.firebase}
   ]
