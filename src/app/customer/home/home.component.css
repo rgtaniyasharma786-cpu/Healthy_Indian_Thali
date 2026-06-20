@@ -17,7 +17,14 @@
 }
 
 
+/* Desktop */
+.carousel-caption h1 {
+    font-size: 50px;
+}
 
+.carousel-caption .tit6 {
+    font-size: 70px;
+}
 
 /* Tablet (md) */
 @media (max-width: 991.98px) {
