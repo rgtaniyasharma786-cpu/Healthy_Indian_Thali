@@ -1,3 +1,53 @@
 .carousel-caption{
     bottom: 300px;
 }
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .carousel-caption {
+        bottom: 150px;
+    }
+}
+
+/* Small devices (mobile) */
+@media (max-width: 767.98px) {
+    .carousel-caption {
+        bottom: 50px;
+    }
+}
+
+
+/* Desktop */
+.carousel-caption h1 {
+    font-size: 50px;
+}
+
+.carousel-caption .tit6 {
+    font-size: 70px;
+}
+
+/* Tablet (md) */
+@media (max-width: 991.98px) {
+    .carousel-caption h1 {
+        font-size: 35px;
+    }
+
+    .carousel-caption .tit6 {
+        font-size: 70px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+    .carousel-caption h1 {
+        font-size: 22px;
+    }
+
+    .carousel-caption .tit6 {
+        font-size: 60px;
+    }
+
+    .carousel-caption {
+        bottom: 50px;
+    }
+}

@@ -7,7 +7,7 @@ import { UserService } from '../../../shared/user/user.service';
 @Component({
   selector: 'app-customer-header',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink],
   templateUrl: './customer-header.component.html',
   styleUrl: './customer-header.component.css'
 })
@@ -21,6 +21,16 @@ export class CustomerHeaderComponent implements OnInit{
   ngOnInit(): void {
     this.checkLogin()
   }
+
+  isSidebarOpen = false;
+
+toggleSidebar() {
+  this.isSidebarOpen = !this.isSidebarOpen;
+}
+
+closeSidebar() {
+  this.isSidebarOpen = false;
+}
 
   checkLogin() {
     if (this.auth.getLogin() == 'true') {

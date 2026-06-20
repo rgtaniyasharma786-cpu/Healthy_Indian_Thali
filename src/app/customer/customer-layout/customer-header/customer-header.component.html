@@ -1,172 +1,135 @@
-<!-- Header -->
 <header>
-	<!-- Header desktop -->
-	<div class="wrap-menu-header gradient1 trans-0-4">
-		<div class="container h-full">
-			<div class="wrap_header trans-0-3">
-				<!-- Logo -->
-				<!-- <div class="logo">
-					<a href="index.html">
-						<img src="assets/images/icons/logo.png" alt="IMG-LOGO"
-							data-logofixed="assets/images/icons/logo2.png">
-					</a>
-				</div> -->
-
-				<!-- Menu -->
-				<div class="wrap_menu p-l-100 p-l-0-xl">
-					<nav class="menu">
-						<ul class="main_menu">
-							<li>
-								<a routerLink="/customer/home">Home</a>
-							</li>
-
-							<li>
-								<a routerLink="/customer/about">About</a>
-							</li>
-
-							<li>
-								<a routerLink="/customer/view-meals">View-Meals</a>
-							</li>
-
-							<li>
-								<a routerLink="/customer/view-pricings">View-Pricing</a>
-							</li>
-							<li>
-								<a routerLink="/customer/custom-booking">Custom</a>
-							</li>
-
-							
-							@if(isLoggedIn){
-							<li>
-								<a routerLink="/customer/view-my-bookings">Bookings</a>
-							</li>
-							<li>
-								<a routerLink="/customer/update-profile">Update-Profile</a>
-							</li>
-							<li>
-								<a (click)="logout()" class="text-white" style="cursor: pointer;">Logout</a>
-							</li>
-							}
-							@else{
-							<li>
-								<a routerLink="/customer/register">Register</a>
-							</li>
-							<li>
-								<a routerLink="/login">login</a>
-							</li>
-
-							}
-						</ul>
-					</nav>
-				</div>
-
-				<!-- Social -->
-				<!-- <div class="social flex-w flex-l-m p-r-20">
-					<button class="btn-show-sidebar m-l-33 trans-0-4"></button>
-				</div> -->
-			</div>
-		</div>
-	</div>
-
+  <div class="wrap-menu-header gradient1 trans-0-4">
+    <div class="container h-full">
+      <div class="wrap_header trans-0-3">
+        <!-- Menu -->
+        <div class="wrap_menu p-l-100 p-l-0-xl">
+          <nav class="menu">
+            <ul class="main_menu">
+              <li><a routerLink="/customer/home">Home</a></li>
+              <li><a routerLink="/customer/about">About</a></li>
+              <li><a routerLink="/customer/view-meals">View-Meals</a></li>
+              <li><a routerLink="/customer/view-pricings">View-Pricing</a></li>
+              <li><a routerLink="/customer/custom-booking">Custom</a></li>
+              @if (isLoggedIn) {
+                <li><a routerLink="/customer/view-my-bookings">Bookings</a></li>
+                <li>
+                  <a routerLink="/customer/update-profile">Update-Profile</a>
+                </li>
+                <li>
+                  <a
+                    (click)="logout()"
+                    class="text-white"
+                    style="cursor: pointer"
+                  >
+                    Logout
+                  </a>
+                </li>
+              } @else {
+                <li><a routerLink="/customer/register">Register</a></li>
+                <li><a routerLink="/login">Login</a></li>
+              }
+            </ul>
+          </nav>
+        </div>
+        <!-- Mobile Menu Icon -->
+        <div class="mobile-menu-btn" (click)="toggleSidebar()">☰</div>
+      </div>
+    </div>
+  </div>
 </header>
-
-
 <!-- Sidebar -->
-<aside class="sidebar trans-0-4">
-	<!-- Button Hide sidebar -->
-	<button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
-
-	<!-- - -->
-	<ul class="menu-sidebar p-t-95 p-b-70">
-		<li class="t-center m-b-13">
-			<a routerLink="/customer/home" class="txt19" routerLinkActive="active">Home</a>
-		</li>
-
-		<li class="t-center m-b-13">
-			<a routerLink="/customer/view-meals" class="txt19" routerLinkActive="active">View-Meals</a>
-		</li>
-
-		<li class="t-center m-b-13">
-			<a routerLink="/customer/update-profile" class="txt19" routerLinkActive="active">Update-Profile</a>
-		</li>
-
-		<!-- <li class="t-center m-b-13">
-			<a routerLink="gallery.html" class="txt19" routerLinkActive="active">Gallery</a>
-		</li> -->
-
-		<li class="t-center m-b-13">
-			<a routerLink="/customer/about" class="txt19" routerLinkActive="active">About</a>
-		</li>
-
-		<li class="t-center m-b-13">
-			<a routerLink="/customer/Register" class="txt19" routerLinkActive="active">Register</a>
-		</li>
-
-		<li class="t-center m-b-33">
-			<a routerLink="/login" class="txt19" routerLinkActive="active">login</a>
-		</li>
-
-		<li class="t-center">
-			<!-- Button3 -->
-			<a routerLink="/customer/view-pricings" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
-				View-Pricing
-			</a>
-		</li>
-	</ul>
-
-	
-	<!-- <div class="gallery-sidebar t-center p-l-60 p-r-60 p-b-40">
-		
-		<h4 class="txt20 m-b-33">
-			Gallery
-		</h4>
-
-		Gallery
-		<div class="wrap-gallery-sidebar flex-w">
-			<a class="item-gallery-sidebar wrap-pic-w" href="assets/images/photo-gallery-01.jpg"
-				data-lightbox="gallery-footer">
-				<img src="assets/images/photo-gallery-thumb-01.jpg" alt="GALLERY">
-			</a>
-
-			<a class="item-gallery-sidebar wrap-pic-w" href="assets/images/photo-gallery-02.jpg"
-				data-lightbox="gallery-footer">
-				<img src="assets/images/photo-gallery-thumb-02.jpg" alt="GALLERY">
-			</a>
-
-			<a class="item-gallery-sidebar wrap-pic-w" href="assets/images/photo-gallery-03.jpg"
-				data-lightbox="gallery-footer">
-				<img src="assets/images/photo-gallery-thumb-03.jpg" alt="GALLERY">
-			</a>
-
-			<a class="item-gallery-sidebar wrap-pic-w" href="assets/images/photo-gallery-05.jpg"
-				data-lightbox="gallery-footer">
-				<img src="assets/images/photo-gallery-thumb-05.jpg" alt="GALLERY">
-			</a>
-
-			<a class="item-gallery-sidebar wrap-pic-w" href="assets/images/photo-gallery-06.jpg"
-				data-lightbox="gallery-footer">
-				<img src="assets/images/photo-gallery-thumb-06.jpg" alt="GALLERY">
-			</a>
-
-			<a class="item-gallery-sidebar wrap-pic-w" href="assets/images/photo-gallery-07.jpg"
-				data-lightbox="gallery-footer">
-				<img src="assets/images/photo-gallery-thumb-07.jpg" alt="GALLERY">
-			</a>
-
-			<a class="item-gallery-sidebar wrap-pic-w" href="assets/images/photo-gallery-09.jpg"
-				data-lightbox="gallery-footer">
-				<img src="assets/images/photo-gallery-thumb-09.jpg" alt="GALLERY">
-			</a>
-
-			<a class="item-gallery-sidebar wrap-pic-w" href="assets/images/photo-gallery-10.jpg"
-				data-lightbox="gallery-footer">
-				<img src="assets/images/photo-gallery-thumb-10.jpg" alt="GALLERY">
-			</a>
-
-			<a class="item-gallery-sidebar wrap-pic-w" href="assets/images/photo-gallery-11.jpg"
-				data-lightbox="gallery-footer">
-				<img src="assets/images/photo-gallery-thumb-11.jpg" alt="GALLERY">
-			</a>
-		</div>
-	</div> -->
+<aside class="sidebar trans-0-4" [class.show-sidebar]="isSidebarOpen">
+  <button
+    class="btn-hide-sidebar ti-close color0-hov trans-0-4"
+    (click)="toggleSidebar()"
+  ></button>
+  <ul class="menu-sidebar p-t-95 p-b-70">
+    <li class="t-center m-b-13">
+      <a
+        routerLink="/customer/home"
+         (click)="closeSidebar()"
+        class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
+      >
+        Home</a
+      >
+    </li>
+    <li class="t-center m-b-13">
+      <a
+        routerLink="/customer/about"
+         (click)="closeSidebar()"
+        class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
+      >
+        About</a
+      >
+    </li>
+    <li class="t-center m-b-13">
+      <a
+        routerLink="/customer/view-meals"
+         (click)="closeSidebar()"
+        class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
+      >
+        View-Meals</a
+      >
+    </li>
+    <li class="t-center m-b-13">
+      <a
+        routerLink="/customer/view-pricings"
+         (click)="closeSidebar()"
+        class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
+      >
+        View-Pricing
+      </a>
+    </li>
+     <li>
+      <a routerLink="/customer/custom-booking"
+       (click)="closeSidebar()"
+      class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
+      >Custom</a>
+    </li>
+    @if (isLoggedIn) {
+      <li class="t-center m-b-13">
+        <a
+          routerLink="/customer/view-my-bookings"
+           (click)="closeSidebar()"
+          class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
+          >Bookings</a
+        >
+      </li>
+      <li class="t-center m-b-13">
+        <a
+          routerLink="/customer/update-profile"
+           (click)="closeSidebar()"
+          class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
+          >Update-Profile</a
+        >
+      </li>
+      <li class="t-center m-b-33">
+        <a
+          (click)="logout()"
+          style="cursor: pointer"
+          class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto text-white"
+        >
+          Logout
+        </a>
+      </li>
+    } @else {
+      <li class="t-center m-b-13">
+        <a
+          routerLink="/customer/register"
+           (click)="closeSidebar()"
+          class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
+          >Register</a
+        >
+      </li>
+      <li class="t-center m-b-33">
+        <a
+          routerLink="/login"
+           (click)="closeSidebar()"
+          class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
+          >Login</a
+        >
+      </li>
+    }
+  </ul>
 </aside>
