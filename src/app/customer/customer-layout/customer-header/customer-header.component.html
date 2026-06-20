@@ -10,8 +10,8 @@
               <li><a routerLink="/customer/about">About</a></li>
               <li><a routerLink="/customer/view-meals">View-Meals</a></li>
               <li><a routerLink="/customer/view-pricings">View-Pricing</a></li>
-              <li><a routerLink="/customer/custom-booking">Custom</a></li>
               @if (isLoggedIn) {
+                <li><a routerLink="/customer/custom-booking">Custom</a></li>
                 <li><a routerLink="/customer/view-my-bookings">Bookings</a></li>
                 <li>
                   <a routerLink="/customer/update-profile">Update-Profile</a>
@@ -48,7 +48,7 @@
     <li class="t-center m-b-13">
       <a
         routerLink="/customer/home"
-         (click)="closeSidebar()"
+        (click)="closeSidebar()"
         class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
       >
         Home</a
@@ -57,7 +57,7 @@
     <li class="t-center m-b-13">
       <a
         routerLink="/customer/about"
-         (click)="closeSidebar()"
+        (click)="closeSidebar()"
         class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
       >
         About</a
@@ -66,7 +66,7 @@
     <li class="t-center m-b-13">
       <a
         routerLink="/customer/view-meals"
-         (click)="closeSidebar()"
+        (click)="closeSidebar()"
         class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
       >
         View-Meals</a
@@ -75,23 +75,27 @@
     <li class="t-center m-b-13">
       <a
         routerLink="/customer/view-pricings"
-         (click)="closeSidebar()"
+        (click)="closeSidebar()"
         class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
       >
         View-Pricing
       </a>
     </li>
-     <li>
-      <a routerLink="/customer/custom-booking"
-       (click)="closeSidebar()"
-      class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
-      >Custom</a>
-    </li>
+
     @if (isLoggedIn) {
+      <li>
+        <a
+          routerLink="/customer/custom-booking"
+          (click)="closeSidebar()"
+          class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
+          >Custom</a
+        >
+      </li>
+
       <li class="t-center m-b-13">
         <a
           routerLink="/customer/view-my-bookings"
-           (click)="closeSidebar()"
+          (click)="closeSidebar()"
           class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
           >Bookings</a
         >
@@ -99,7 +103,7 @@
       <li class="t-center m-b-13">
         <a
           routerLink="/customer/update-profile"
-           (click)="closeSidebar()"
+          (click)="closeSidebar()"
           class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
           >Update-Profile</a
         >
@@ -117,7 +121,7 @@
       <li class="t-center m-b-13">
         <a
           routerLink="/customer/register"
-           (click)="closeSidebar()"
+          (click)="closeSidebar()"
           class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
           >Register</a
         >
@@ -125,7 +129,7 @@
       <li class="t-center m-b-33">
         <a
           routerLink="/login"
-           (click)="closeSidebar()"
+          (click)="closeSidebar()"
           class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
           >Login</a
         >
